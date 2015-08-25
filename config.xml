@@ -7,7 +7,7 @@
 
 	    <gap:platform name='android' />
 
-	    <name>Test App</name>
+	    <name>Hello World App</name>
 
 	    <description>
 	        App used for testing
