@@ -1,11 +1,6 @@
-// document.addEventListener('deviceready', function(){
-//   alert("HI3")
-//   $("h3").html("Hello Aliens")
-// }, false);
-
 
 document.addEventListener('deviceready', function() {
-	alert("Document is ready")
+	alert("You look funny")
 	var output = $('#output')
 
 	$.ajax({
