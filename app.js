@@ -21,7 +21,9 @@ document.addEventListener('deviceready', function() {
 	})
 
 	$('#output').html("<p>Hi this is a lovely paragraph testing if the app is even working</p>")
-})
+}, false)
+
+
 
 // $(document).ready(function() {
 // 	var output = $('#output')
