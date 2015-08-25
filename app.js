@@ -19,6 +19,8 @@ document.addEventListener('deviceready', function() {
 			output.text('There was an error loading the data.')
 		}
 	})
+
+	$('#output').html("<p>Hi this is a lovely paragraph testing if the app is even working</p>")
 })
 
 // $(document).ready(function() {
@@ -42,4 +44,6 @@ document.addEventListener('deviceready', function() {
 // 			output.text('There was an error loading the data.')
 // 		}
 // 	})
+
+// 	$('#output').html("<p>Hi this is a lovely paragraph testing if the app is even working</p>")
 // })
