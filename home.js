@@ -1,5 +1,6 @@
 document.addEventListener('deviceready', function(){
-  alert("HI")
+  alert("HI3")
+  $("h3").html("Hello Aliens")
 }, false);
 
 
