@@ -1,4 +1,6 @@
-alert("HIIIII")
+document.addEventListener('deviceready', function(){
+	alert("HI")
+}, false);
 
 // document.addEventListener('deviceready', function() {
 // 	alert("Document is ready")
