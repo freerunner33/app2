@@ -21,26 +21,26 @@ document.addEventListener('deviceready', function() {
 			
 			output.append('<hr><h1>Menu Categories</h1>')
 
-			// $.each(data[1], function(i, item) { 	// assigns data[1][i] to item
-			// 	categories.push({
-			// 		name: item.name,  
-			// 		size1: item.size1, 
-			// 		size2: item.size2, 
-			// 		size3: item.size3, 
-			// 		size4: item.size4, 
-			// 		size5: item.size5
-			// 	})
+			$.each(data[1], function(i, item) { 	// assigns data[1][i] to item
+				categories.push({
+					name: item.name,  
+					size1: item.size1, 
+					size2: item.size2, 
+					size3: item.size3, 
+					size4: item.size4, 
+					size5: item.size5
+				})
 
-			// 	var menuitem += '<hr><h3>' + item.name + '</h3>'
-			// 	menuitem += (item.size1) ? item.size1 + '<br>' : ''
-			// 	menuitem += (item.size2) ? item.size2 + '<br>' : ''
-			// 	menuitem += (item.size3) ? item.size3 + '<br>' : ''
-			// 	menuitem += (item.size4) ? item.size4 + '<br>' : ''
-			// 	menuitem += (item.size5) ? item.size5 : ''
-			// 	menuitem += '</p>'
+				// var menuitem += '<hr><h3>' + item.name + '</h3>'
+				// menuitem += (item.size1) ? item.size1 + '<br>' : ''
+				// menuitem += (item.size2) ? item.size2 + '<br>' : ''
+				// menuitem += (item.size3) ? item.size3 + '<br>' : ''
+				// menuitem += (item.size4) ? item.size4 + '<br>' : ''
+				// menuitem += (item.size5) ? item.size5 : ''
+				// menuitem += '</p>'
 
-			// 	output.append(menuitem)
-			// })
+				// output.append(menuitem)
+			})
 
 			output.append('<hr><h1>Menu Items</h1>')
 
