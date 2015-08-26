@@ -1,18 +1,11 @@
 
 var categories = [
-	{name: 'Drinks', size1: '12oz.', size2: '16oz', size3: '20oz.', size4: '24oz.', size5: null},
-	{name: 'Food', size1: 'Small', size2: 'Medium', size3: 'Large', size4: null, size5: null}
+	//{name: 'Drinks', size1: '12oz.', size2: '16oz', size3: '20oz.', size4: '24oz.', size5: null}
 ]
 
 var menu = [
-	{name: 'Strawberry Smoothie', category: 'Drinks', price1: 2.59, price2: 3.29, price3: 3.99, price4: 4.69, price5: null},
-	{name: 'Hot Chocolate', category: 'Drinks', price1: 1.99, price2: 2.49, price3: 2.99, price4: 3.49, price5: null},
-	{name: 'Caramel Macchiatto', category: 'Drinks', price1: 2.29, price2: 2.79, price3: 3.29, price4: 3.79, price5: null},
-	{name: 'Turkey Sandwich', category: 'Food', price1: 4.99, price2: 5.99, price3: 6.99, price4: null, price5: null},
-	{name: 'Meatball Sub', category: 'Food', price1: 5.49, price2: 6.49, price3: 7.49, price4: null, price5: null}
+	//{name: 'Strawberry Smoothie', category: 'Drinks', price1: 2.59, price2: 3.29, price3: 3.99, price4: 4.69, price5: null}
 ]
-
-var temp = []
 
 document.addEventListener('deviceready', function() {
 	alert("Your mom")
