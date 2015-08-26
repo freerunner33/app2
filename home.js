@@ -63,6 +63,7 @@ var menu = [
 document.addEventListener('deviceready', function() {
 	alert("Your mom")
 	var output = $('#output')
+	var category = ''
 
 	$.ajax({
 		url: 'http://noahthomas.us/USD/menu_1.php',
@@ -71,9 +72,13 @@ document.addEventListener('deviceready', function() {
 		timeout: 0,
 		success: function(data, status) {
 
-			$.each(data, function(i, item) {
-				var menuitem = '<h1>' + item.name + '</h1>'
-				+ '<h3>' + data[0] + item.category + '</h3>'
+			$.each(data, function(i, item) { 	// assigns data[i] to item
+				var menuitem = ''
+				if (category != item.category) {	// if new category then label it
+					category = item.category
+					menuitem += '<h1>' + category + '</h1>'
+				}
+				menuitem += '<h3>' + item.name + '</h3>'
 				+ '<p>Price1: ' + item.price1 + '<br>'
 				+ 'Price2: ' + item.price2 + '<br>' 
 				+ 'Price3: ' + item.price3 + '<br>'
