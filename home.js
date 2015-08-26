@@ -12,6 +12,8 @@ var menu = [
 	{name: 'Meatball Sub', category: 'Food', price1: 5.49, price2: 6.49, price3: 7.49, price4: null, price5: null}
 ]
 
+var temp = []
+
 document.addEventListener('deviceready', function() {
 	alert("Your mom")
 	var output = $('#output')
@@ -53,6 +55,24 @@ document.addEventListener('deviceready', function() {
 		},
 		error: function() {
 			output.text('There was an error loading the data.')
+
+			$.each(menu, function(i, item) { 	// assigns menu[i] to item
+				
+				var menuitem = ''
+				if (category != item.category) {	// if new category then label it
+					category = item.category
+					menuitem += '<hr><h1>' + category + '</h1>'
+				}
+				menuitem += '<h3>' + item.name + '</h3><p>'
+				menuitem += (item.price1) ? item.price1 + '<br>' : ''
+				menuitem += (item.price2) ? item.price2 + '<br>' : ''
+				menuitem += (item.price3) ? item.price3 + '<br>' : ''
+				menuitem += (item.price4) ? item.price4 + '<br>' : ''
+				menuitem += (item.price5) ? item.price5 : ''
+				menuitem += '</p>'
+
+				output.append(menuitem)
+			})
 		}
 	})
 
