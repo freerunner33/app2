@@ -31,15 +31,15 @@ document.addEventListener('deviceready', function() {
 					size5: item.size5
 				})
 
-				// var menuitem += '<hr><h3>' + item.name + '</h3>'
-				// menuitem += (item.size1) ? item.size1 + '<br>' : ''
-				// menuitem += (item.size2) ? item.size2 + '<br>' : ''
-				// menuitem += (item.size3) ? item.size3 + '<br>' : ''
-				// menuitem += (item.size4) ? item.size4 + '<br>' : ''
-				// menuitem += (item.size5) ? item.size5 : ''
-				// menuitem += '</p>'
+				var menuitem += '<hr><h2>' + item.name + '</h2><p>'
+				menuitem += (item.size1) ? item.size1 + '<br>' : ''
+				menuitem += (item.size2) ? item.size2 + '<br>' : ''
+				menuitem += (item.size3) ? item.size3 + '<br>' : ''
+				menuitem += (item.size4) ? item.size4 + '<br>' : ''
+				menuitem += (item.size5) ? item.size5 : ''
+				menuitem += '</p>'
 
-				// output.append(menuitem)
+				output.append(menuitem)
 			})
 
 			output.append('<hr><h1>Menu Items</h1>')
