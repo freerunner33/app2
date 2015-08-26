@@ -78,12 +78,13 @@ document.addEventListener('deviceready', function() {
 					category = item.category
 					menuitem += '<h1>' + category + '</h1>'
 				}
-				menuitem += '<h3>' + item.name + '</h3>'
-				+ '<p>Price1: ' + item.price1 + '<br>'
-				+ 'Price2: ' + item.price2 + '<br>' 
-				+ 'Price3: ' + item.price3 + '<br>'
-				+ 'Price4: ' + item.price4 + '<br>'
-				+ 'Price5: ' + item.price5 + '</p>'
+				menuitem += '<h3>' + item.name + '</h3><p>'
+				menuitem += (item.price1) ? item.price1 + '<br>' : ''
+				menuitem += (item.price2) ? item.price2 + '<br>' : ''
+				menuitem += (item.price3) ? item.price3 + '<br>' : ''
+				menuitem += (item.price4) ? item.price4 + '<br>' : ''
+				menuitem += (item.price5) ? item.price5 : ''
+				menuitem += '</p>'
 
 				output.append(menuitem)
 			})
