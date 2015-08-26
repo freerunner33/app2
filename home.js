@@ -91,6 +91,9 @@ document.addEventListener('deviceready', function() {
 
 				output.append(menuitem)
 			})
+		},
+		complete: function() {
+			
 		}
 		// complete: function() {
 		// 	output.append('<h1>HEYOOO YOU COMPLETED</h1>')
