@@ -65,7 +65,7 @@ document.addEventListener('deviceready', function() {
 	var output = $('#output')
 
 	$.ajax({
-		url: 'http://noahthomas.us/USD/menu.php',
+		url: 'http://noahthomas.us/USD/menu_1.php',
 		dataType: 'jsonp',
 		jsonp: 'jsoncallback',
 		timeout: 0,
