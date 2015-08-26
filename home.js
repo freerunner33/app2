@@ -19,7 +19,7 @@ document.addEventListener('deviceready', function() {
 		timeout: 0,
 		success: function(data, status) {
 			
-			// output.append('<hr><h1>Menu Categories</h1>')
+			output.append('<hr><h1>Menu Categories</h1>')
 
 			// $.each(data[1], function(i, item) { 	// assigns data[1][i] to item
 			// 	categories.push({
@@ -28,7 +28,7 @@ document.addEventListener('deviceready', function() {
 			// 		size2: item.size2, 
 			// 		size3: item.size3, 
 			// 		size4: item.size4, 
-			// 		size5: item.size4
+			// 		size5: item.size5
 			// 	})
 
 			// 	var menuitem += '<hr><h3>' + item.name + '</h3>'
@@ -42,7 +42,7 @@ document.addEventListener('deviceready', function() {
 			// 	output.append(menuitem)
 			// })
 
-			// output.append('<hr><h1>Menu Items</h1>')
+			output.append('<hr><h1>Menu Items</h1>')
 
 			$.each(data[0], function(i, item) { 	// assigns data[0][i] to item
 				menu.push({
@@ -58,9 +58,9 @@ document.addEventListener('deviceready', function() {
 				var menuitem = ''
 				if (category != item.category) {	// if new category then label it
 					category = item.category
-					menuitem += '<hr><h1>' + category + '</h1>'
+					menuitem += '<hr><h2>' + category + '</h2>'
 				}
-				menuitem += '<h3>' + item.name + '</h3><p>'
+				menuitem += '<h4>' + item.name + '</h4><p>'
 				menuitem += (item.price1) ? item.price1 + '<br>' : ''
 				menuitem += (item.price2) ? item.price2 + '<br>' : ''
 				menuitem += (item.price3) ? item.price3 + '<br>' : ''
