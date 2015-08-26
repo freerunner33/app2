@@ -93,7 +93,7 @@ document.addEventListener('deviceready', function() {
 			})
 		},
 		complete: function() {
-			
+			output.text('hi')
 		}
 		// complete: function() {
 		// 	output.append('<h1>HEYOOO YOU COMPLETED</h1>')
