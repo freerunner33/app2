@@ -19,7 +19,7 @@ document.addEventListener('deviceready', function() {
 		timeout: 0,
 		success: function(data, status) {
 
-			$.each(data, function(i, item) { 	// assigns data[i] to item
+			$.each(data[0], function(i, item) { 	// assigns data[0][i] to item
 				menu.push({
 					name: item.name, 
 					category: item.category, 
@@ -29,7 +29,7 @@ document.addEventListener('deviceready', function() {
 					price4: item.price4, 
 					price5: item.price5
 				})
-				
+
 				var menuitem = ''
 				if (category != item.category) {	// if new category then label it
 					category = item.category
