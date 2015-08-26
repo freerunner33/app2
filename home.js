@@ -1,63 +1,15 @@
 
 var categories = [
-	"Food",
-	"Drinks",
-	"Desserts"
+	{'Drinks', '12oz.', '16oz', '20oz.', '24oz.'},
+	{'Food', 'Small', 'Medium', 'Large'}
 ]
 
 var menu = [
-	{
-		category: 'Food',
-		size1: 'Small',
-		size2: 'Medium',
-		size3: 'Large',
-		size4: null,
-		size5: null,
-		items: [
-			{
-				name: 'Turkey Sandwich',
-				price1: 3.49,
-				price2: 4.49,
-				price3: 5.49,
-				price4: null,
-				price5: null
-			},
-			{
-				name: 'Fettuccine Alfredo',
-				price1: 6.99,
-				price2: 7.99,
-				price3: 8.99,
-				price4: null,
-				price5: null
-			}
-		]
-	},
-	{
-		category: 'Drinks',
-		size1: '12oz.',
-		size2: '16oz.',
-		size3: '20oz.',
-		size4: '24oz.',
-		size5: '32oz.',
-		items: [
-			{
-				name: 'Strawberry Smoothie',
-				price1: 1.99,
-				price2: 2.49,
-				price3: 2.99,
-				price4: 3.49,
-				price5: 3.99
-			},
-			{
-				name: 'Super Coffee',
-				price1: 2.29,
-				price2: 2.79,
-				price3: 3.29,
-				price4: 3.79,
-				price5: 4.29
-			}
-		]
-	}
+	{name: 'Strawberry Smoothie', category: 'Drinks', price1: 2.59, price2: 3.29, price3: 3.99, price4: 4.69, price5: null},
+	{name: 'Hot Chocolate', category: 'Drinks', price1: 1.99, price2: 2.49, price3: 2.99, price4: 3.49, price5: null},
+	{name: 'Caramel Macchiatto', category: 'Drinks', price1: 2.29, price2: 2.79, price3: 3.29, price4: 3.79, price5: null},
+	{name: 'Turkey Sandwich', category: 'Food', price1: 4.99, price2: 5.99, price3: 6.99, price4: null, price5: null},
+	{name: 'Meatball Sub', category: 'Food', price1: 5.49, price2: 6.49, price3: 7.49, price4: null, price5: null}
 ]
 
 document.addEventListener('deviceready', function() {
@@ -73,10 +25,20 @@ document.addEventListener('deviceready', function() {
 		success: function(data, status) {
 
 			$.each(data, function(i, item) { 	// assigns data[i] to item
+				menu.push({
+					name: item.name, 
+					category: item.category, 
+					price1: item.price1, 
+					price2: item.price2, 
+					price3: item.price3, 
+					price4: item.price4, 
+					price5: item.price5
+				})
+				
 				var menuitem = ''
 				if (category != item.category) {	// if new category then label it
 					category = item.category
-					menuitem += '<h1>' + category + '</h1>'
+					menuitem += '<hr><h1>' + category + '</h1>'
 				}
 				menuitem += '<h3>' + item.name + '</h3><p>'
 				menuitem += (item.price1) ? item.price1 + '<br>' : ''
