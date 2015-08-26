@@ -31,7 +31,7 @@ document.addEventListener('deviceready', function() {
 					size5: item.size5
 				})
 
-				var menuitem += '<hr><h2>' + item.name + '</h2><p>'
+				var menuitem = '<hr><h2>' + item.name + '</h2><p>'
 				menuitem += (item.size1) ? item.size1 + '<br>' : ''
 				menuitem += (item.size2) ? item.size2 + '<br>' : ''
 				menuitem += (item.size3) ? item.size3 + '<br>' : ''
