@@ -18,30 +18,31 @@ document.addEventListener('deviceready', function() {
 		jsonp: 'jsoncallback',
 		timeout: 0,
 		success: function(data, status) {
-			output.append('<hr><h1>Menu Categories</h1>')
+			
+			// output.append('<hr><h1>Menu Categories</h1>')
 
-			$.each(data[1], function(i, item) { 	// assigns data[1][i] to item
-				categories.push({
-					name: item.name,  
-					size1: item.size1, 
-					size2: item.size2, 
-					size3: item.size3, 
-					size4: item.size4, 
-					size5: item.size4
-				})
+			// $.each(data[1], function(i, item) { 	// assigns data[1][i] to item
+			// 	categories.push({
+			// 		name: item.name,  
+			// 		size1: item.size1, 
+			// 		size2: item.size2, 
+			// 		size3: item.size3, 
+			// 		size4: item.size4, 
+			// 		size5: item.size4
+			// 	})
 
-				var menuitem += '<hr><h3>' + item.name + '</h3>'
-				menuitem += (item.size1) ? item.size1 + '<br>' : ''
-				menuitem += (item.size2) ? item.size2 + '<br>' : ''
-				menuitem += (item.size3) ? item.size3 + '<br>' : ''
-				menuitem += (item.size4) ? item.size4 + '<br>' : ''
-				menuitem += (item.size5) ? item.size5 : ''
-				menuitem += '</p>'
+			// 	var menuitem += '<hr><h3>' + item.name + '</h3>'
+			// 	menuitem += (item.size1) ? item.size1 + '<br>' : ''
+			// 	menuitem += (item.size2) ? item.size2 + '<br>' : ''
+			// 	menuitem += (item.size3) ? item.size3 + '<br>' : ''
+			// 	menuitem += (item.size4) ? item.size4 + '<br>' : ''
+			// 	menuitem += (item.size5) ? item.size5 : ''
+			// 	menuitem += '</p>'
 
-				output.append(menuitem)
-			})
+			// 	output.append(menuitem)
+			// })
 
-			output.append('<hr><h1>Menu Items</h1>')
+			// output.append('<hr><h1>Menu Items</h1>')
 
 			$.each(data[0], function(i, item) { 	// assigns data[0][i] to item
 				menu.push({
@@ -95,31 +96,3 @@ document.addEventListener('deviceready', function() {
 
 	$("h3").html("HELLO ALIENS")
 }, false)
-
-
-// $(document).ready(function() {
-// 	alert("Document is ready")
-// 	var output = $('div#output')
-
-// 	$.ajax({
-// 		url: 'http://noahthomas.us/pg/landmarks.php',
-// 		dataType: 'jsonp',
-// 		jsonp: 'jsoncallback',
-// 		timeout: 0,
-// 		success: function(data, status) {
-// 			$.each(data, function(i, item) {
-// 				var landmark = '<h1>' + item.name + '</h1>'
-// 				+ '<p>' + item.latitude + '<br>'
-// 				+ item.longitude + '</p>'
-
-// 				output.append(landmark)
-// 			})
-// 		},
-// 		error: function() {
-// 			output.text('There was an error loading the data.')
-// 		}
-// 	})
-
-// 	$('#output').html("<p>Hi this is a lovely paragraph testing if the app is even working</p>")
-// 	$("h3").html("HELLO ALIENS")
-// })
