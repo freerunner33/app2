@@ -92,9 +92,9 @@ document.addEventListener('deviceready', function() {
 				output.append(menuitem)
 			})
 		}
-		complete: function() {
-			output.append('<h1>HEYOOO YOU COMPLETED</h1>')
-		}
+		// complete: function() {
+		// 	output.append('<h1>HEYOOO YOU COMPLETED</h1>')
+		// }
 	})
 
 	$("h3").html("HELLO ALIENS")
