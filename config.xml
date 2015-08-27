@@ -7,10 +7,10 @@
 
 	    <gap:platform name='android' />
 
-	    <name>Hello World App</name>
+	    <name>Test App II</name>
 
 	    <description>
-	        App used for testing
+	        Lovely little app used to test code
 	    </description>
 
 	    <author href="http://noahthomas.us/" email="007noahthomas@gmail.com">
