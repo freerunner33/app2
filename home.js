@@ -42,12 +42,10 @@ document.addEventListener('deviceready', function() {
 			})
 		},
 		error: function() {
-			output.text('There was an error loading the data. Please connect your device to an 
-				internet connection for up-to-date dining information.')
+			output.text('There was an error loading the data. Please connect your device to an ' + 
+				'internet connection for up-to-date dining information.')
 		},
 		complete: function() {
-			alert("Running complete")
-
 			output.append('<p>Here is where you put all general code</p>')
 			
 			output.append('<hr><h1>Menu Categories</h1>')
@@ -83,8 +81,6 @@ document.addEventListener('deviceready', function() {
 
 			// 	output.append(menuitem)
 			// })
-
-			alert("Finished complete")
 		}
 	})
 
