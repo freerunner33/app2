@@ -46,8 +46,6 @@ document.addEventListener('deviceready', function() {
 				'internet connection for up-to-date dining information.')
 		},
 		complete: function() {
-			output.append('<p>Here is where you put all general code</p>')
-			
 			output.append('<hr><h1>Menu Categories</h1>')
 
 			$.each(categories, function(i, cat) {
