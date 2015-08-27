@@ -18,8 +18,6 @@ document.addEventListener('deviceready', function() {
 		jsonp: 'jsoncallback',
 		timeout: 0,
 		success: function(data, status) {
-			alert("Running success")
-			
 			$.each(data[1], function(i, item) { 	// assigns data[1][i] to item
 				categories.push({
 					name: item.name,  
@@ -42,15 +40,10 @@ document.addEventListener('deviceready', function() {
 					price5: item.price5
 				})
 			})
-
-			alert("Finished success")
 		},
 		error: function() {
-			alert("Running error")
-
-			output.text('There was an error loading the data. Please connect your device to an internet connection for up-to-date dining information.')
-
-			alert("Finished error")
+			output.text('There was an error loading the data. Please connect your device to an 
+				internet connection for up-to-date dining information.')
 		},
 		complete: function() {
 			alert("Running complete")
@@ -71,7 +64,7 @@ document.addEventListener('deviceready', function() {
 			// 		output.append(categoryitem)
 			// })
 			
-			// output.append('<hr><h1>Menu Items</h1>')
+			output.append('<hr><h1>Menu Items</h1>')
 
 			// $.each(menu, function(i, item) { 	// assigns menu[i] to item
 				
