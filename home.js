@@ -50,17 +50,17 @@ document.addEventListener('deviceready', function() {
 			
 			output.append('<hr><h1>Menu Categories</h1>')
 
-			// $.each(categories, function(i, cat) {
-			// 	var categoryitem = '<hr><h2>' + cat.name + '</h2><p>'
-			// 		categoryitem += (cat.size1) ? cat.size1 + '<br>' : ''
-			// 		categoryitem += (cat.size2) ? cat.size2 + '<br>' : ''
-			// 		categoryitem += (cat.size3) ? cat.size3 + '<br>' : ''
-			// 		categoryitem += (cat.size4) ? cat.size4 + '<br>' : ''
-			// 		categoryitem += (cat.size5) ? cat.size5 : ''
-			// 		categoryitem += '</p>'
+			$.each(categories, function(i, cat) {
+				var categoryitem = '<hr><h2>' + cat.name + '</h2><p>'
+					categoryitem += (cat.size1) ? cat.size1 + '<br>' : ''
+					categoryitem += (cat.size2) ? cat.size2 + '<br>' : ''
+					categoryitem += (cat.size3) ? cat.size3 + '<br>' : ''
+					categoryitem += (cat.size4) ? cat.size4 + '<br>' : ''
+					categoryitem += (cat.size5) ? cat.size5 : ''
+					categoryitem += '</p>'
 
-			// 		output.append(categoryitem)
-			// })
+					output.append(categoryitem)
+			})
 			
 			output.append('<hr><h1>Menu Items</h1>')
 
