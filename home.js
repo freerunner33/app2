@@ -18,9 +18,8 @@ document.addEventListener('deviceready', function() {
 		jsonp: 'jsoncallback',
 		timeout: 0,
 		success: function(data, status) {
+			alert("Running success")
 			
-			output.append('<hr><h1>Menu Categories</h1>')
-
 			$.each(data[1], function(i, item) { 	// assigns data[1][i] to item
 				categories.push({
 					name: item.name,  
@@ -30,19 +29,7 @@ document.addEventListener('deviceready', function() {
 					size4: item.size4, 
 					size5: item.size5
 				})
-
-				var menuitem = '<hr><h2>' + item.name + '</h2><p>'
-				menuitem += (item.size1) ? item.size1 + '<br>' : ''
-				menuitem += (item.size2) ? item.size2 + '<br>' : ''
-				menuitem += (item.size3) ? item.size3 + '<br>' : ''
-				menuitem += (item.size4) ? item.size4 + '<br>' : ''
-				menuitem += (item.size5) ? item.size5 : ''
-				menuitem += '</p>'
-
-				output.append(menuitem)
 			})
-
-			output.append('<hr><h1>Menu Items</h1>')
 
 			$.each(data[0], function(i, item) { 	// assigns data[0][i] to item
 				menu.push({
@@ -54,25 +41,38 @@ document.addEventListener('deviceready', function() {
 					price4: item.price4, 
 					price5: item.price5
 				})
-
-				var menuitem = ''
-				if (category != item.category) {	// if new category then label it
-					category = item.category
-					menuitem += '<hr><h2>' + category + '</h2>'
-				}
-				menuitem += '<h4>' + item.name + '</h4><p>'
-				menuitem += (item.price1) ? item.price1 + '<br>' : ''
-				menuitem += (item.price2) ? item.price2 + '<br>' : ''
-				menuitem += (item.price3) ? item.price3 + '<br>' : ''
-				menuitem += (item.price4) ? item.price4 + '<br>' : ''
-				menuitem += (item.price5) ? item.price5 : ''
-				menuitem += '</p>'
-
-				output.append(menuitem)
 			})
+
+			alert("Finished success")
 		},
 		error: function() {
-			output.text('There was an error loading the data.')
+			alert("Running error")
+
+			output.text('There was an error loading the data. Please connect your device to an internet connection
+				for up-to-date dining information.')
+
+			alert("Finished error")
+		},
+		complete: function() {
+			alert("Running complete")
+
+			output.append('<p>Here is where you put all general code</p>')
+			
+			output.append('<hr><h1>Menu Categories</h1>')
+
+			$.each(categories, function(i, cat) {
+				var categoryitem = '<hr><h2>' + cat.name + '</h2><p>'
+					categoryitem += (cat.size1) ? cat.size1 + '<br>' : ''
+					categoryitem += (cat.size2) ? cat.size2 + '<br>' : ''
+					categoryitem += (cat.size3) ? cat.size3 + '<br>' : ''
+					categoryitem += (cat.size4) ? cat.size4 + '<br>' : ''
+					categoryitem += (cat.size5) ? cat.size5 : ''
+					categoryitem += '</p>'
+
+					output.append(categoryitem)
+			})
+			
+			output.append('<hr><h1>Menu Items</h1>')
 
 			$.each(menu, function(i, item) { 	// assigns menu[i] to item
 				
@@ -91,13 +91,9 @@ document.addEventListener('deviceready', function() {
 
 				output.append(menuitem)
 			})
-		},
-		complete: function() {
-			output.append('<p>hi</p>')
+
+			alert("Finished complete")
 		}
-		// complete: function() {
-		// 	output.append('<h1>HEYOOO YOU COMPLETED</h1>')
-		// }
 	})
 
 	$("h3").html("HELLO ALIENS")
