@@ -79,9 +79,9 @@ document.addEventListener('deviceready', function() {
 
 			// 	output.append(menuitem)
 			// })
-			str = '<h4>FAIL</h4>'
 			$.each(categories, function(i, cat) {
-				// var str = '<div id="collapsible"><h3>' + cat.name + '</h3><div id="content"><table><tr>'
+				var str = '<div id="collapsible"><h3>' + cat.name + '</h3><div id="content">'
+				// str += '<table><tr>'
 				// str += '<th>Name</th>'
 				// str += (cat.size1) ? '<th>' + cat.size1 + '</th>' : ''
 				// str += (cat.size2) ? '<th>' + cat.size2 + '</th>' : ''
@@ -101,7 +101,8 @@ document.addEventListener('deviceready', function() {
 				// 	str += (item.price5) ? '<td>' + item.price5 + '</td>' : ''
 				// 	str += '</tr>'
 				// })
-				// str += '</table></div></div>'
+				// str += '</table>'
+				str += '</div></div>'
 
 				output.append(str)
 			})
