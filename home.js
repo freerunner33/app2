@@ -48,8 +48,7 @@ document.addEventListener('deviceready', function() {
 		error: function() {
 			alert("Running error")
 
-			output.text('There was an error loading the data. Please connect your device to an internet connection
-				for up-to-date dining information.')
+			output.text('There was an error loading the data. Please connect your device to an internet connection for up-to-date dining information.')
 
 			alert("Finished error")
 		},
@@ -60,37 +59,37 @@ document.addEventListener('deviceready', function() {
 			
 			output.append('<hr><h1>Menu Categories</h1>')
 
-			$.each(categories, function(i, cat) {
-				var categoryitem = '<hr><h2>' + cat.name + '</h2><p>'
-					categoryitem += (cat.size1) ? cat.size1 + '<br>' : ''
-					categoryitem += (cat.size2) ? cat.size2 + '<br>' : ''
-					categoryitem += (cat.size3) ? cat.size3 + '<br>' : ''
-					categoryitem += (cat.size4) ? cat.size4 + '<br>' : ''
-					categoryitem += (cat.size5) ? cat.size5 : ''
-					categoryitem += '</p>'
+			// $.each(categories, function(i, cat) {
+			// 	var categoryitem = '<hr><h2>' + cat.name + '</h2><p>'
+			// 		categoryitem += (cat.size1) ? cat.size1 + '<br>' : ''
+			// 		categoryitem += (cat.size2) ? cat.size2 + '<br>' : ''
+			// 		categoryitem += (cat.size3) ? cat.size3 + '<br>' : ''
+			// 		categoryitem += (cat.size4) ? cat.size4 + '<br>' : ''
+			// 		categoryitem += (cat.size5) ? cat.size5 : ''
+			// 		categoryitem += '</p>'
 
-					output.append(categoryitem)
-			})
+			// 		output.append(categoryitem)
+			// })
 			
-			output.append('<hr><h1>Menu Items</h1>')
+			// output.append('<hr><h1>Menu Items</h1>')
 
-			$.each(menu, function(i, item) { 	// assigns menu[i] to item
+			// $.each(menu, function(i, item) { 	// assigns menu[i] to item
 				
-				var menuitem = ''
-				if (category != item.category) {	// if new category then label it
-					category = item.category
-					menuitem += '<hr><h1>' + category + '</h1>'
-				}
-				menuitem += '<h3>' + item.name + '</h3><p>'
-				menuitem += (item.price1) ? item.price1 + '<br>' : ''
-				menuitem += (item.price2) ? item.price2 + '<br>' : ''
-				menuitem += (item.price3) ? item.price3 + '<br>' : ''
-				menuitem += (item.price4) ? item.price4 + '<br>' : ''
-				menuitem += (item.price5) ? item.price5 : ''
-				menuitem += '</p>'
+			// 	var menuitem = ''
+			// 	if (category != item.category) {	// if new category then label it
+			// 		category = item.category
+			// 		menuitem += '<hr><h1>' + category + '</h1>'
+			// 	}
+			// 	menuitem += '<h3>' + item.name + '</h3><p>'
+			// 	menuitem += (item.price1) ? item.price1 + '<br>' : ''
+			// 	menuitem += (item.price2) ? item.price2 + '<br>' : ''
+			// 	menuitem += (item.price3) ? item.price3 + '<br>' : ''
+			// 	menuitem += (item.price4) ? item.price4 + '<br>' : ''
+			// 	menuitem += (item.price5) ? item.price5 : ''
+			// 	menuitem += '</p>'
 
-				output.append(menuitem)
-			})
+			// 	output.append(menuitem)
+			// })
 
 			alert("Finished complete")
 		}
