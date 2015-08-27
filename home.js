@@ -80,9 +80,8 @@ document.addEventListener('deviceready', function() {
 			// 	output.append(menuitem)
 			// })
 
-			var str = ''
 			$.each(categories, function(i, cat) {
-				str += '<div id="collapsible"><h3>' + cat.name + '</h3><div id="content"><table><tr>'
+				var str = '<div id="collapsible"><h3>' + cat.name + '</h3><div id="content"><table><tr>'
 				str += '<th>Name</th>'
 				str += (cat.size1) ? '<th>' + cat.size1 + '</th>' : ''
 				str += (cat.size2) ? '<th>' + cat.size2 + '</th>' : ''
