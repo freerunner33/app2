@@ -81,6 +81,4 @@ document.addEventListener('deviceready', function() {
 			})
 		}
 	})
-
-	$("h3").html("HELLO ALIENS")
 }, false)
