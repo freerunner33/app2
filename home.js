@@ -81,14 +81,14 @@ document.addEventListener('deviceready', function() {
 			// })
 			$.each(categories, function(i, cat) {
 				var str = '<div id="collapsible"><h3>' + cat.name + '</h3><div id="content">'
-				// str += '<table><tr>'
-				// str += '<th>Name</th>'
-				// str += (cat.size1) ? '<th>' + cat.size1 + '</th>' : ''
-				// str += (cat.size2) ? '<th>' + cat.size2 + '</th>' : ''
-				// str += (cat.size3) ? '<th>' + cat.size3 + '</th>' : ''
-				// str += (cat.size4) ? '<th>' + cat.size4 + '</th>' : ''
-				// str += (cat.size5) ? '<th>' + cat.size5 + '</th>' : ''
-				// str += '</tr>'
+				str += '<table><tr>'
+				str += '<th>Name</th>'
+				str += (cat.size1) ? '<th>' + cat.size1 + '</th>' : ''
+				str += (cat.size2) ? '<th>' + cat.size2 + '</th>' : ''
+				str += (cat.size3) ? '<th>' + cat.size3 + '</th>' : ''
+				str += (cat.size4) ? '<th>' + cat.size4 + '</th>' : ''
+				str += (cat.size5) ? '<th>' + cat.size5 + '</th>' : ''
+				str += '</tr>'
 
 				// $.each(menu, function(j, item) {
 				// 	if (item.category != cat.name)
@@ -101,7 +101,7 @@ document.addEventListener('deviceready', function() {
 				// 	str += (item.price5) ? '<td>' + item.price5 + '</td>' : ''
 				// 	str += '</tr>'
 				// })
-				// str += '</table>'
+				str += '</table>'
 				str += '</div></div>'
 
 				output.append(str)
