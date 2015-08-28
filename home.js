@@ -93,6 +93,7 @@ document.addEventListener('deviceready', function() {
 				$.each(menu, function(j, item) {
 					if (item.category == cat.name) {
 						str += '<tr><td>' + item.name + '</td>'
+						str += (item.price1) ? '<td>' + item.price1 + '</td>' : ''
 						str += '</tr>'
 					}
 					// 	str += (item.price1) ? '<td>' + item.price1 + '</td>' : ''
