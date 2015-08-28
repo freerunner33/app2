@@ -8,7 +8,8 @@ var menu = [
 ]
 
 document.addEventListener('deviceready', function() {
-	alert("Hacking...")
+
+	alert("hacking...")
 	var output = $('#output')
 	var category = ''
 
