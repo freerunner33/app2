@@ -91,15 +91,15 @@ document.addEventListener('deviceready', function() {
 				str += '</tr>'
 
 				$.each(menu, function(j, item) {
-					// 	if (item.category != cat.name)
-					// 		continue
-					str += '<tr><td>' + item.name + '</td>'
+					if (item.category == cat.name) {
+						str += '<tr><td>' + item.name + '</td>'
+						str += '</tr>'
+					}
 					// 	str += (item.price1) ? '<td>' + item.price1 + '</td>' : ''
 					// 	str += (item.price2) ? '<td>' + item.price2 + '</td>' : ''
 					// 	str += (item.price3) ? '<td>' + item.price3 + '</td>' : ''
 					// 	str += (item.price4) ? '<td>' + item.price4 + '</td>' : ''
 					// 	str += (item.price5) ? '<td>' + item.price5 + '</td>' : ''
-					str += '</tr>'
 				})
 				
 				str += '</table>'
