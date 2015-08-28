@@ -90,7 +90,7 @@ document.addEventListener('deviceready', function() {
 				str += (cat.size5) ? '<th>' + cat.size5 + '</th>' : ''
 				str += '</tr>'
 
-				// $.each(menu, function(j, item) {
+				$.each(menu, function(j, item) {
 				// 	if (item.category != cat.name)
 				// 		continue
 				// 	str += '<tr><td>' + item.name + '</td>'
@@ -100,7 +100,8 @@ document.addEventListener('deviceready', function() {
 				// 	str += (item.price4) ? '<td>' + item.price4 + '</td>' : ''
 				// 	str += (item.price5) ? '<td>' + item.price5 + '</td>' : ''
 				// 	str += '</tr>'
-				// })
+				})
+				
 				str += '</table>'
 				str += '</div></div>'
 
