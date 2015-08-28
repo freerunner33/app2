@@ -94,6 +94,10 @@ document.addEventListener('deviceready', function() {
 					if (item.category == cat.name) {
 						str += '<tr><td>' + item.name + '</td>'
 						str += (item.price1) ? '<td>' + item.price1 + '</td>' : ''
+						str += (item.price2) ? '<td>' + item.price2 + '</td>' : ''
+						str += (item.price3) ? '<td>' + item.price3 + '</td>' : ''
+						str += (item.price4) ? '<td>' + item.price4 + '</td>' : ''
+						str += (item.price5) ? '<td>' + item.price5 + '</td>' : ''
 						str += '</tr>'
 					}
 					// 	str += (item.price1) ? '<td>' + item.price1 + '</td>' : ''
